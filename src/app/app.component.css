@@ -1,28 +1,59 @@
-header {
-    animation-name: colors;
+/* Nav */
+nav ul li {
+
+}
+
+/* Search */
+#search {
+    animation-name: rainbowBackground;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
-header form > * {
+#search form > * {
     display: inline-block;
     margin-left: -4px;
 }
 
-header .mat-input-container {
+#search .mat-input-container {
     width: 75%;
 }
 
-header .mat-form-field-infix {
+#search .mat-form-field-infix {
     width: 100%;
 }
 
-header .mat-raised-button {
+#search .mat-raised-button {
     margin-left: calc(5% - 4px) !important;
     width: 20%;
 }
 
-@keyframes colors {
+/* Gifs */
+#results {
+    margin: 0 -2.5%;
+}
+
+#results article {
+    vertical-align: top;
+    display: inline-block;
+    width: 28.333333%;
+    padding: 0 2.5%;
+    margin-bottom: 5%
+}
+
+#results article.selected video {
+    animation-name: rainbowBorder;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#results article video {
+    width: 100%;
+    border: 5px solid transparent;
+}
+
+/* Animations */
+@keyframes rainbowBackground {
     0% { background-color: red; }
     10% { background-color: green; }
     20% { background-color: violet; }
@@ -34,4 +65,18 @@ header .mat-raised-button {
     80% { background-color: orangered; }
     90% { background-color: mediumpurple; }
     100% { background-color: aqua; }
+}
+
+@keyframes rainbowBorder {
+    0% { border-color: red; }
+    10% { border-color: green; }
+    20% { border-color: violet; }
+    30% { border-color: yellow; }
+    40% { border-color: orange; }
+    50% { border-color: purple; }
+    60% { border-color: aquamarine; }
+    70% { border-color: cornflowerblue; }
+    80% { border-color: orangered; }
+    90% { border-color: mediumpurple; }
+    100% { border-color: aqua; }
 }

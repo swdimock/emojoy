@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,16 +43,86 @@ table {
   border-spacing: 0; }
 
 body {
-  background: black url("../../images/background.jpg") no-repeat; }
+  background: black url("../../images/background.jpg") no-repeat fixed;
+  font-family: 'Roboto', sans-serif;
+  color: white; }
 
-header {
+header nav {
+  margin: .5rem 1.5rem; }
+  header nav ul li {
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    margin-right: 1.5rem;
+    opacity: 0.75; }
+    header nav ul li:last-child {
+      margin-right: 0; }
+    header nav ul li:hover {
+      -webkit-animation-name: rainbowColor;
+              animation-name: rainbowColor;
+      -webkit-animation-duration: 3s;
+              animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      opacity: 1; }
+
+header #search {
   width: auto;
   padding: 0;
-  margin: 1.5rem;
+  margin: .5em 1.5rem 1.5rem;
   background: rgba(254, 230, 255, 0.8);
   box-shadow: 3px 3px 0 #da65d0; }
-  header form {
-    margin: 0 1em; }
+
+header form {
+  margin: 0 1em; }
 
 main {
   margin: 1.5rem; }
+
+@-webkit-keyframes rainbowColor {
+  0% {
+    color: red; }
+  10% {
+    color: green; }
+  20% {
+    color: violet; }
+  30% {
+    color: yellow; }
+  40% {
+    color: orange; }
+  50% {
+    color: purple; }
+  60% {
+    color: aquamarine; }
+  70% {
+    color: cornflowerblue; }
+  80% {
+    color: orangered; }
+  90% {
+    color: mediumpurple; }
+  100% {
+    color: aqua; } }
+
+@keyframes rainbowColor {
+  0% {
+    color: red; }
+  10% {
+    color: green; }
+  20% {
+    color: violet; }
+  30% {
+    color: yellow; }
+  40% {
+    color: orange; }
+  50% {
+    color: purple; }
+  60% {
+    color: aquamarine; }
+  70% {
+    color: cornflowerblue; }
+  80% {
+    color: orangered; }
+  90% {
+    color: mediumpurple; }
+  100% {
+    color: aqua; } }

@@ -1,31 +1,43 @@
 <header>
-    <form>
-        <mat-form-field>
-            <input
-                    #searchInput
-                    matInput
-                    placeholder="Got an idea?  There's a gif for that!">
-        </mat-form-field>
-        <button
-                (click)='search(searchInput.value)'
-                mat-raised-button
-                type="button"
-                color="primary">Go Giphy, Go!</button>
-    </form>
+
+    <nav>
+        <ul>
+            <li routerLink="/mine">What's mine is mine.</li>
+            <li routerLink="/vote">Break the internet.</li>
+        </ul>
+    </nav>
+
+    <section id="search">
+        <form>
+            <mat-form-field>
+                <input
+                        #searchInput
+                        matInput
+                        placeholder="Got an idea?  There's a gif for that!">
+            </mat-form-field>
+            <button
+                    (click)='search(searchInput.value)'
+                    mat-raised-button
+                    type="button"
+                    color="primary">Go Giphy, Go!</button>
+        </form>
+    </section>
 </header>
 
 <main>
 
     <section id="results">
-        <article class="in">
+        <article *ngFor="let gif of gifResults" (click)="toggle(gif['id'])" [class.selected]="isSelected(gif['id'])">
             <video
                     autoplay
                     loop
-                    src="https://media1.giphy.com/media/gw3IWyGkC0rsazTi/giphy-preview.mp4"
-                    poster="https://media1.giphy.com/media/gw3IWyGkC0rsazTi/200_s.gif">
+                    src="{{gif['mp4']}}"
+                    poster="{{gif['thumb']}}">
                 Apparently you can't watch HTML5 vids.  You suck!
             </video>
         </article>
     </section>
+
+    <router-outlet></router-outlet>
 
 </main>
